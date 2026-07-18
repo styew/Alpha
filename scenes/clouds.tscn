@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bpbxygn7qs02c"]
+
+[ext_resource type="Texture2D" uid="uid://cvip2ao58swh2" path="res://assets/sky.png" id="1_p445k"]
+[ext_resource type="Script" uid="uid://do5uiblfjcdgu" path="res://scripts/clouds.gd" id="1_v7ppl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ppl"]
+atlas = ExtResource("1_p445k")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67ctl"]
+atlas = ExtResource("1_p445k")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihijd"]
+atlas = ExtResource("1_p445k")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q442c"]
+atlas = ExtResource("1_p445k")
+region = Rect2(0, 48, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qi08"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_v7ppl")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_67ctl")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_ihijd")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_q442c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="clouds" type="Node2D" unique_id=1704985778]
+script = ExtResource("1_v7ppl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1574991136]
+sprite_frames = SubResource("SpriteFrames_7qi08")
+frame_progress = 0.04779381

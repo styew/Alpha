@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://db8lswnrlp82b"]
+
+[ext_resource type="Texture2D" uid="uid://bctmsrwxic37t" path="res://assets/ground.png" id="1_avsvi"]
+[ext_resource type="Script" uid="uid://ifjdmrw472fg" path="res://scripts/tree.gd" id="2_vplca"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vplca"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(80, 108, 16, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viusy"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(96, 108, 16, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
+atlas = ExtResource("1_avsvi")
+region = Rect2(112, 108, 16, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qi08"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_vplca")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_viusy")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_qd6xs")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ug8er"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qi08"]
+size = Vector2(13, 10)
+
+[node name="tree" type="Node2D" unique_id=684507532]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370377266]
+position = Vector2(-1, 9)
+sprite_frames = SubResource("SpriteFrames_7qi08")
+frame_progress = 0.13838644
+script = ExtResource("2_vplca")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=449561033]
+physics_material_override = SubResource("PhysicsMaterial_ug8er")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1797889281]
+visible = false
+position = Vector2(-1.5, 22)
+shape = SubResource("RectangleShape2D_7qi08")

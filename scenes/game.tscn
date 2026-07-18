@@ -1,0 +1,1172 @@
+[gd_scene format=4 uid="uid://s4mlgehef3gf"]
+
+[ext_resource type="PackedScene" uid="uid://dtxflvobljc8h" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://cf37jihwq4r4h" path="res://assets/house_in.png" id="2_p57ef"]
+[ext_resource type="Script" uid="uid://d06sgfyiabqfj" path="res://scripts/house.gd" id="2_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://bctmsrwxic37t" path="res://assets/ground.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dg4ywurdhq0dx" path="res://scenes/hd1.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://b6tvx85awk4x" path="res://assets/house_ext.png" id="3_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bpbxygn7qs02c" path="res://scenes/clouds.tscn" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://c3p0tftb6to03" path="res://assets/vegetation.png" id="8_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ufum6g2si5jl" path="res://scenes/tree_1.tscn" id="9_vtaks"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
+texture = ExtResource("2_yqjtg")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.3961096, -4.0610213, -6.294584, -4.467123, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.4749136, -8, -6.2950544)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, 4.873226, 8, 4.3166103, -6.115196, -8, -6.2950544)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.2159033, -8, -5.5756207, 8, -8, 8, -8, -8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -3.057598, 8, 8, 4.6763268, 8, 4.136751, -8, 8, -8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.4964685, -8, -3.5971746, -3.2374563, 8, -3.057598, 8, 8, -8, 8, -8, -8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -3.057598, 8, 8, -8, 8, -8, -2.877739)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -3.057598, 8, 8, -8, 8, -8, -2.877739, 4.6763268, -3.057598, 5.2159023, -8, 8, -8)
+5:0/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+5:2/0 = 0
+2:3/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+5:7/0 = 0
+5:8/0 = 0
+6:7/0 = 0
+6:8/0 = 0
+7:7/0 = 0
+7:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7qi08"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_lnu2h")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gee14"]
+texture = ExtResource("2_p57ef")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 8, 0.17985916, 8, -0.35971832, -1.4388695, -8, -2.6978807, -8, -8)
+0:2/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 0.8992939, 8, 8, 0.71943474, 8, -8, 8, -8, -8)
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 8, 0.17985916, 8)
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 0.8992939, 0.71943474, 0.8992939, 0.71943474, 8, -8, 8, -8, -8)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 8, 0.17985916, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -0.71943474, -8, -1.2590103, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -8, 8, -8, 8, 8, 0.17985916, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -0.71943474, -8, -1.2590103, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.35971832, -8, 8, -8, 8, -0.71943474, -0.17985916, -0.35971642)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1.0791512, -8, -1.0791512)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -0.71943474, -8, -1.2590103, 8, -8, 8)
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.1583042, -8, -2.3381624)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -0.71943474, -8, -1.0791531, -2.3381624, -8, -2.3381624)
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ug8er"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_gee14")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
+texture = ExtResource("2_p57ef")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+1:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+1:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u51hs"]
+sources/0 = SubResource("TileSetAtlasSource_0tnpc")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
+texture = ExtResource("3_u5sy4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 5.935339, 3.956892, 6.115196, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.5971737, 4.136751, 8, 4.136751, 8, 8, 3.5971737, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.1583042, 8, -1.7985878, -8, -5.935338, -8, -8, 8)
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.5756207, 8, 5.935339, -8, 2.5180225, -8, 1.7985878, 8)
+2:11/0 = 0
+2:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.935338, 8, 8, 8, 8, 3.7770348, -1.978447, 3.956892, -2.3381634, -8, -6.115197, -8, -5.935338, 8)
+3:11/0 = 0
+3:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+4:11/0 = 0
+4:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+5:11/0 = 0
+5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+6:11/0 = 0
+6:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+7:11/0 = 0
+7:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+8:11/0 = 0
+8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
+9:11/0 = 0
+9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 5.5756207, 8, 5.935339, -8, 2.5180225, -8, 1.6187286, 4.3166103, -8, 4.4964695, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_f6moa"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 4
+sources/0 = SubResource("TileSetAtlasSource_vtaks")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvpfn"]
+texture = ExtResource("3_u5sy4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cd8mx"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_kvpfn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dinhu"]
+texture = ExtResource("3_u5sy4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0ljay"]
+sources/0 = SubResource("TileSetAtlasSource_dinhu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
+texture = ExtResource("3_u5sy4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.978447, 6.2950554, -2.6978807, 6.2950554, 2.1583061, -8, 2.3381634)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.4173164, 2.6978817, 3.2374573, -1.6187286, 8, 2.5180225)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vm3xe"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_kvuet")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd8mx"]
+size = Vector2(72, 52)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trtic"]
+texture = ExtResource("8_0tnpc")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2ih1x"]
+sources/0 = SubResource("TileSetAtlasSource_trtic")
+
+[node name="Game" type="Node2D" unique_id=1902719148]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=954902026]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAD/////AAABAAEAAAD//wAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAAAAP7/AAABAAEAAAD///7/AAABAAEAAAD+//7/AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAD//wIAAAABAAEAAAD+/wIAAAABAAEAAAD+/wMAAAABAAIAAAD//wMAAAABAAIAAAABAAEAAAABAAIAAAACAAEAAAABAAIAAAADAAEAAAACAAIAAAAAAAMAAAACAAIAAAAAAAIAAAACAAEAAAADAAAAAAACAAEAAAADAP//AAACAAEAAAADAP7/AAACAAAAAAD9/wMAAAAHAAIAAAD9/wIAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAAFAAEAAAD9////AAAFAAEAAAD9//7/AAAFAAEAAAD9//3/AAAAAAAAAAABAP3/AAACAAAAAAACAP7/AAABAAAAAAAAAP3/AAABAAAAAAD///3/AAABAAAAAAD+//3/AAABAAAAAAABAP7/AAABAAEAAAAAAAEAAAAAAAIAAAACAP//AAABAAEAAAACAAAAAAABAAEAAAD8//7/AAAEAAEAAAD7//7/AAABAAAAAAD6//7/AAABAAAAAAD5//7/AAABAAAAAAD4//7/AAABAAAAAAD3//7/AAABAAAAAAD2//7/AAABAAAAAAD1//7/AAABAAAAAAD0//7/AAAAAAAAAAD0////AAAAAAEAAAD0/wAAAAAAAAEAAAD0/wEAAAAAAAEAAAD0/wIAAAAAAAEAAAD0/wMAAAAAAAEAAAD0/wQAAAAFAAEAAAD0/wUAAAAFAAIAAAD1/wYAAAABAAIAAAD0/wYAAAAAAAIAAAD8/wYAAAACAAIAAAD2/wYAAAABAAIAAAD3/wYAAAABAAIAAAD4/wYAAAABAAIAAAD5/wYAAAABAAIAAAD6/wYAAAABAAIAAAD7/wYAAAABAAIAAAD8/wUAAAACAAEAAAD8/wQAAAACAAEAAAD8/wMAAAAGAAIAAAD8/wIAAAABAAEAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD7////AAABAAEAAAD6////AAABAAEAAAD5////AAABAAEAAAD4////AAABAAEAAAD3////AAABAAEAAAD2////AAABAAEAAAD2/wAAAAABAAEAAAD1/wAAAAABAAEAAAD1////AAABAAEAAAD3/wAAAAABAAEAAAD4/wAAAAABAAEAAAD5/wAAAAABAAEAAAD6/wAAAAABAAEAAAD7/wAAAAABAAEAAAD7/wEAAAABAAEAAAD7/wIAAAABAAEAAAD7/wMAAAABAAEAAAD7/wQAAAABAAEAAAD7/wUAAAABAAEAAAD6/wUAAAABAAEAAAD5/wUAAAABAAEAAAD4/wUAAAABAAEAAAD3/wUAAAABAAEAAAD2/wUAAAABAAEAAAD1/wUAAAABAAEAAAD1/wQAAAABAAEAAAD1/wMAAAABAAEAAAD1/wIAAAABAAEAAAD1/wEAAAABAAEAAAD2/wEAAAABAAEAAAD3/wEAAAABAAEAAAD4/wEAAAABAAEAAAD4/wIAAAABAAEAAAD5/wIAAAABAAEAAAD6/wIAAAABAAEAAAD6/wEAAAABAAEAAAD5/wEAAAABAAEAAAD3/wIAAAABAAEAAAD2/wIAAAABAAEAAAD2/wMAAAABAAEAAAD3/wMAAAABAAEAAAD2/wQAAAABAAEAAAD3/wQAAAABAAEAAAD4/wQAAAABAAEAAAD5/wQAAAABAAEAAAD5/wMAAAABAAEAAAD4/wMAAAABAAEAAAD6/wQAAAABAAEAAAD6/wMAAAABAAEAAAD9/wQAAAAHAAMAAAD+/wQAAAABAAMAAAD//wQAAAABAAMAAAD+/wUAAAABAAQAAAD9/wUAAAAAAAQAAAD//wUAAAACAAQAAAD9/wYAAAAHAAMAAAD+/wYAAAABAAQAAAD//wYAAAACAAQAAAD9/wcAAAAHAAMAAAD+/wgAAAAHAAMAAAD9/wgAAAAAAAMAAAD+/wcAAAACAAQAAAD6/wcAAAAAAAMAAAD6/wgAAAAAAAQAAAD7/wcAAAABAAMAAAD7/wgAAAABAAQAAAD8/wcAAAACAAMAAAD8/wgAAAACAAQAAAD3/wcAAAAAAAMAAAD3/wgAAAAAAAQAAAD4/wcAAAABAAMAAAD4/wgAAAABAAQAAAD5/wcAAAACAAMAAAD5/wgAAAACAAQAAAD0/wcAAAAAAAMAAAD0/wgAAAAAAAQAAAD1/wcAAAABAAMAAAD1/wgAAAABAAQAAAD2/wcAAAACAAMAAAD2/wgAAAACAAQAAAABAAIAAAAAAAMAAAABAAMAAAAAAAQAAAACAAIAAAABAAMAAAACAAMAAAABAAQAAAADAAIAAAACAAMAAAADAAMAAAACAAQAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAQAAAABAAQAAAAAAAMAAAABAAUAAAAAAAQAAAACAAQAAAABAAMAAAACAAUAAAABAAQAAAADAAQAAAACAAMAAAADAAUAAAACAAQAAADz/wQAAAAEAAEAAADy/wQAAAABAAAAAADx/wQAAAABAAAAAADw/wQAAAABAAAAAAAFAAMAAAABAAEAAAD//w0AAAABAAEAAADw/wsAAAABAAAAAADv/wQAAAAEAAEAAADy/wUAAAAEAAIAAADx/wUAAAAEAAIAAADw/wUAAAAEAAIAAADv/wUAAAAEAAIAAADu/wUAAAAGAAIAAADu/wYAAAACAAEAAADu/wcAAAACAAEAAADu/wgAAAACAAEAAADu/wkAAAACAAEAAADu/woAAAACAAEAAADu/wsAAAAGAAEAAADv/wsAAAABAAAAAADx/wsAAAABAAAAAADy/wsAAAACAAAAAADy/wwAAAACAAEAAADy/w0AAAACAAEAAADy/w4AAAACAAEAAADy/w8AAAACAAEAAADy/xAAAAACAAIAAADx/xAAAAABAAIAAADw/xAAAAABAAIAAADv/xAAAAABAAIAAADu/xAAAAABAAIAAADt/xAAAAABAAIAAADs/xAAAAABAAIAAADr/xAAAAABAAIAAADq/xAAAAABAAIAAADp/xAAAAABAAIAAADo/xAAAAAAAAIAAADo/w8AAAAAAAEAAADo/w4AAAAAAAEAAADo/w0AAAAAAAEAAADo/wwAAAAAAAEAAADo/wsAAAAAAAEAAADo/woAAAAAAAAAAADp/woAAAABAAAAAADq/woAAAABAAAAAADr/woAAAABAAAAAADs/woAAAAFAAEAAADs/wkAAAAAAAEAAADs/wgAAAAAAAEAAADs/wcAAAAAAAEAAADs/wYAAAAAAAEAAADs/wUAAAAAAAEAAADs/wQAAAAFAAAAAADt/wQAAAABAAAAAADu/wQAAAABAAAAAADt/wkAAAABAAEAAADt/wgAAAABAAEAAADt/wcAAAABAAEAAADt/wYAAAABAAEAAADt/wUAAAABAAEAAADt/woAAAABAAEAAADt/wsAAAABAAEAAADs/wsAAAABAAEAAADr/wsAAAABAAEAAADq/wsAAAABAAEAAADp/wsAAAABAAEAAADp/wwAAAABAAEAAADp/w0AAAABAAEAAADq/w0AAAABAAEAAADq/w4AAAABAAEAAADp/w4AAAABAAEAAADp/w8AAAABAAEAAADq/wwAAAABAAEAAADr/wwAAAABAAEAAADs/wwAAAABAAEAAADt/wwAAAABAAEAAADu/wwAAAABAAEAAADv/wwAAAABAAEAAADw/wwAAAABAAEAAADx/wwAAAABAAEAAADx/w0AAAABAAEAAADx/w4AAAABAAEAAADx/w8AAAABAAEAAADw/w8AAAABAAEAAADv/w8AAAABAAEAAADu/w8AAAABAAEAAADt/w8AAAABAAEAAADs/w8AAAABAAEAAADr/w8AAAABAAEAAADq/w8AAAABAAEAAADr/w4AAAABAAEAAADr/w0AAAABAAEAAADs/w0AAAABAAEAAADt/w0AAAABAAEAAADt/w4AAAABAAEAAADu/w4AAAABAAEAAADs/w4AAAABAAEAAADu/w0AAAABAAEAAADv/w0AAAABAAEAAADv/w4AAAABAAEAAADw/w4AAAABAAEAAADw/w0AAAABAAEAAADv/wYAAAABAAMAAADw/wYAAAABAAMAAADx/wYAAAABAAMAAADy/wYAAAABAAMAAADz/wYAAAABAAMAAADo/xEAAAABAAMAAADp/xEAAAABAAMAAADq/xEAAAABAAMAAADr/xEAAAABAAMAAADs/xEAAAABAAMAAADt/xEAAAABAAMAAADu/xEAAAABAAMAAADv/xEAAAABAAMAAADw/xEAAAABAAMAAADx/xEAAAABAAMAAADy/xEAAAABAAMAAADz/wUAAAABAAIAAAA=")
+tile_set = SubResource("TileSet_7qi08")
+
+[node name="House" type="TileMapLayer" parent="." unique_id=2069615209]
+script = ExtResource("2_u5sy4")
+
+[node name="floor" type="TileMapLayer" parent="House" unique_id=860644369]
+light_mask = 2
+visibility_layer = 2
+tile_map_data = PackedByteArray("AAD2/wAAAQAEAAIAAAD2/wEAAQAEAAMAAAD3/wAAAQAFAAIAAAD3/wEAAQAFAAMAAAD4/wAAAQAEAAIAAAD4/wEAAQAEAAMAAAD5/wAAAQAFAAIAAAD5/wEAAQAFAAMAAAD2/wIAAQAEAAIAAAD2/wMAAQAEAAMAAAD3/wIAAQAFAAIAAAD3/wMAAQAFAAMAAAD4/wIAAQAEAAIAAAD4/wMAAQAEAAMAAAD5/wIAAQAFAAIAAAD5/wMAAQAFAAMAAAD6/wIAAQAGAAIAAAD6/wMAAQAGAAMAAAD6/wAAAQAGAAIAAAD6/wEAAQAGAAMAAAD4//7/AQACAAAAAAD4////AQACAAEAAAD5//7/AQADAAAAAAD5////AQADAAEAAAD2//7/AQACAAAAAAD2////AQACAAEAAAD3//7/AQADAAAAAAD3////AQADAAEAAAD6//7/AQAGAAAAAAD6////AQAGAAEAAAD1/wAAAQABAAQAAAD1/wEAAQABAAUAAAD1/wIAAQABAAQAAAD1/wMAAQABAAUAAAD1//7/AQADAAIAAAD1////AQADAAMAAAA=")
+tile_set = SubResource("TileSet_ug8er")
+
+[node name="windows" type="TileMapLayer" parent="House" unique_id=813201550]
+tile_map_data = PackedByteArray("AAD4//7/AAAEAAYAAAD4////AAAEAAcAAAD5//7/AAAFAAYAAAD5////AAAFAAcAAAD2//7/AAAGAAYAAAD2////AAAGAAcAAAD3//7/AAAHAAYAAAD3////AAAHAAcAAAA=")
+tile_set = SubResource("TileSet_u51hs")
+
+[node name="wallfrontCollisionE" type="TileMapLayer" parent="House" unique_id=586109262]
+light_mask = 2
+visibility_layer = 2
+tile_map_data = PackedByteArray("AAD1/wIAAAACAAoAAAD1/wMAAAACAAsAAAD2/wIAAAADAAoAAAD2/wMAAAADAAsAAAD5/wIAAAAIAAoAAAD5/wMAAAAIAAsAAAD6/wIAAAAJAAoAAAD6/wMAAAAJAAsAAAA=")
+tile_set = SubResource("TileSet_f6moa")
+
+[node name="windows out" type="TileMapLayer" parent="House/wallfrontCollisionE" unique_id=377214300]
+tile_map_data = PackedByteArray("AAD5/wIAAAAEAAAAAAD5/wMAAAAEAAEAAAD6/wIAAAAFAAAAAAD6/wMAAAAFAAEAAAA=")
+tile_set = SubResource("TileSet_cd8mx")
+
+[node name="wallfrontCollisionI" type="TileMapLayer" parent="House" unique_id=185755319]
+light_mask = 2
+visibility_layer = 2
+tile_map_data = PackedByteArray("AAD1/wIAAAACAAoAAAD1/wMAAAACAAsAAAD2/wIAAAADAAoAAAD2/wMAAAADAAsAAAD5/wIAAAAIAAoAAAD5/wMAAAAIAAsAAAD6/wIAAAAJAAoAAAD6/wMAAAAJAAsAAAA=")
+tile_set = SubResource("TileSet_f6moa")
+
+[node name="windows out" type="TileMapLayer" parent="House/wallfrontCollisionI" unique_id=1102652148]
+tile_map_data = PackedByteArray("AAD5/wIAAAAEAAAAAAD5/wMAAAAEAAEAAAD6/wIAAAAFAAAAAAD6/wMAAAAFAAEAAAA=")
+tile_set = SubResource("TileSet_cd8mx")
+
+[node name="roof" type="TileMapLayer" parent="House" unique_id=1371584950]
+z_index = 10
+tile_map_data = PackedByteArray("AAD1/wAAAAACAAgAAAD1/wEAAAACAAkAAAD2/wAAAAADAAgAAAD2/wEAAAADAAkAAAD5/wAAAAAIAAgAAAD5/wEAAAAIAAkAAAD6/wAAAAAJAAgAAAD6/wEAAAAJAAkAAAD5//7/AAAIAAYAAAD5////AAAIAAcAAAD6//7/AAAJAAYAAAD6////AAAJAAcAAAD1//7/AAACAAYAAAD1////AAACAAcAAAD2//7/AAADAAYAAAD2////AAADAAcAAAD3//7/AAAEAAYAAAD3////AAAEAAcAAAD4//7/AAAFAAYAAAD4////AAAFAAcAAAD3/wAAAAAGAAgAAAD3/wEAAAAGAAkAAAD4/wAAAAAHAAgAAAD4/wEAAAAHAAkAAAA=")
+tile_set = SubResource("TileSet_0ljay")
+
+[node name="door" type="TileMapLayer" parent="House" unique_id=1449404121]
+tile_map_data = PackedByteArray("AAD4/wMAAAABAAEAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAEAAAD4/wIAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_vm3xe")
+
+[node name="Area2D" type="Area2D" parent="House/door" unique_id=1286508359]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/door/Area2D" unique_id=797657056]
+position = Vector2(-128, 23)
+shape = SubResource("RectangleShape2D_cd8mx")
+
+[node name="Characters" type="Node2D" parent="." unique_id=1946824150]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" parent="Characters" unique_id=781604950 groups=["player"] instance=ExtResource("1_uwrxv")]
+z_index = 5
+position = Vector2(-17, 29)
+
+[node name="Camera2D" type="Camera2D" parent="Characters/CharacterBody2D" unique_id=96901351]
+zoom = Vector2(4, 4)
+
+[node name="Enemy2" parent="Characters" unique_id=2068090914 instance=ExtResource("3_lnu2h")]
+z_index = 5
+position = Vector2(-41, 27)
+
+[node name="cloudsmatrix" type="TileMapLayer" parent="." unique_id=2104538717]
+visible = false
+z_index = 50
+
+[node name="clouds2" type="TileMapLayer" parent="cloudsmatrix" unique_id=396959659]
+z_index = 50
+
+[node name="clouds40" parent="cloudsmatrix/clouds2" unique_id=1704985778 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(13, 128)
+
+[node name="clouds41" parent="cloudsmatrix/clouds2" unique_id=1684674114 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-9, 128)
+
+[node name="clouds42" parent="cloudsmatrix/clouds2" unique_id=1198902388 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(57, 128)
+
+[node name="clouds43" parent="cloudsmatrix/clouds2" unique_id=230855274 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(35, 128)
+
+[node name="clouds12" parent="cloudsmatrix/clouds2" unique_id=1232389338 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(16, 105)
+
+[node name="clouds13" parent="cloudsmatrix/clouds2" unique_id=1345276213 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-6, 105)
+
+[node name="clouds14" parent="cloudsmatrix/clouds2" unique_id=1362954537 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(60, 105)
+
+[node name="clouds15" parent="cloudsmatrix/clouds2" unique_id=1447212428 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(38, 105)
+
+[node name="clouds9" parent="cloudsmatrix/clouds2" unique_id=310160587 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(17, 97)
+
+[node name="clouds8" parent="cloudsmatrix/clouds2" unique_id=1675650287 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-5, 97)
+
+[node name="clouds10" parent="cloudsmatrix/clouds2" unique_id=922378949 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(61, 97)
+
+[node name="clouds11" parent="cloudsmatrix/clouds2" unique_id=10905607 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(39, 97)
+
+[node name="clouds16" parent="cloudsmatrix/clouds2" unique_id=1362213227 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(15, 120)
+
+[node name="clouds17" parent="cloudsmatrix/clouds2" unique_id=46360119 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-7, 120)
+
+[node name="clouds18" parent="cloudsmatrix/clouds2" unique_id=1051690173 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(59, 120)
+
+[node name="clouds19" parent="cloudsmatrix/clouds2" unique_id=1326470560 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(37, 120)
+
+[node name="clouds20" parent="cloudsmatrix/clouds2" unique_id=703491355 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(16, 112)
+
+[node name="clouds21" parent="cloudsmatrix/clouds2" unique_id=287555918 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-6, 112)
+
+[node name="clouds22" parent="cloudsmatrix/clouds2" unique_id=1684229271 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(60, 112)
+
+[node name="clouds23" parent="cloudsmatrix/clouds2" unique_id=862043309 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(38, 112)
+
+[node name="clouds24" parent="cloudsmatrix/clouds2" unique_id=562824786 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(104, 105)
+
+[node name="clouds25" parent="cloudsmatrix/clouds2" unique_id=552632512 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(82, 105)
+
+[node name="clouds26" parent="cloudsmatrix/clouds2" unique_id=1165151899 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(148, 105)
+
+[node name="clouds27" parent="cloudsmatrix/clouds2" unique_id=1837352173 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(126, 105)
+
+[node name="clouds28" parent="cloudsmatrix/clouds2" unique_id=1430366675 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(105, 97)
+
+[node name="clouds29" parent="cloudsmatrix/clouds2" unique_id=1385834595 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(83, 97)
+
+[node name="clouds30" parent="cloudsmatrix/clouds2" unique_id=788817818 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(149, 97)
+
+[node name="clouds31" parent="cloudsmatrix/clouds2" unique_id=1569816767 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(127, 97)
+
+[node name="clouds32" parent="cloudsmatrix/clouds2" unique_id=390865138 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(103, 120)
+
+[node name="clouds33" parent="cloudsmatrix/clouds2" unique_id=646457363 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(81, 120)
+
+[node name="clouds34" parent="cloudsmatrix/clouds2" unique_id=1154666840 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(147, 120)
+
+[node name="clouds35" parent="cloudsmatrix/clouds2" unique_id=1955704590 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(125, 120)
+
+[node name="clouds36" parent="cloudsmatrix/clouds2" unique_id=1255940619 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(104, 112)
+
+[node name="clouds37" parent="cloudsmatrix/clouds2" unique_id=86611372 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(82, 112)
+
+[node name="clouds38" parent="cloudsmatrix/clouds2" unique_id=1552083534 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(148, 112)
+
+[node name="clouds39" parent="cloudsmatrix/clouds2" unique_id=986387783 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(126, 112)
+
+[node name="clouds44" parent="cloudsmatrix/clouds2" unique_id=455981041 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(103, 128)
+
+[node name="clouds45" parent="cloudsmatrix/clouds2" unique_id=812151601 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(81, 128)
+
+[node name="clouds46" parent="cloudsmatrix/clouds2" unique_id=203229617 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(147, 128)
+
+[node name="clouds47" parent="cloudsmatrix/clouds2" unique_id=771115446 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(125, 128)
+
+[node name="clouds" type="TileMapLayer" parent="cloudsmatrix" unique_id=28403003]
+z_index = 50
+
+[node name="clouds40" parent="cloudsmatrix/clouds" unique_id=1767922259 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(7, 165)
+
+[node name="clouds41" parent="cloudsmatrix/clouds" unique_id=1690873119 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-15, 165)
+
+[node name="clouds42" parent="cloudsmatrix/clouds" unique_id=702592895 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(51, 165)
+
+[node name="clouds43" parent="cloudsmatrix/clouds" unique_id=850347477 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(29, 165)
+
+[node name="clouds12" parent="cloudsmatrix/clouds" unique_id=101303466 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(10, 142)
+
+[node name="clouds13" parent="cloudsmatrix/clouds" unique_id=1424753975 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-12, 142)
+
+[node name="clouds14" parent="cloudsmatrix/clouds" unique_id=1336529948 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(54, 142)
+
+[node name="clouds15" parent="cloudsmatrix/clouds" unique_id=1810429550 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(32, 142)
+
+[node name="clouds9" parent="cloudsmatrix/clouds" unique_id=1414761013 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(11, 134)
+
+[node name="clouds8" parent="cloudsmatrix/clouds" unique_id=836547956 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-11, 134)
+
+[node name="clouds10" parent="cloudsmatrix/clouds" unique_id=1434687963 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(55, 134)
+
+[node name="clouds11" parent="cloudsmatrix/clouds" unique_id=2100242936 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(33, 134)
+
+[node name="clouds16" parent="cloudsmatrix/clouds" unique_id=1667903958 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(9, 157)
+
+[node name="clouds17" parent="cloudsmatrix/clouds" unique_id=996950219 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-13, 157)
+
+[node name="clouds18" parent="cloudsmatrix/clouds" unique_id=1510891129 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(53, 157)
+
+[node name="clouds19" parent="cloudsmatrix/clouds" unique_id=1097918435 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(31, 157)
+
+[node name="clouds20" parent="cloudsmatrix/clouds" unique_id=1219599197 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(10, 149)
+
+[node name="clouds21" parent="cloudsmatrix/clouds" unique_id=745811549 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-12, 149)
+
+[node name="clouds22" parent="cloudsmatrix/clouds" unique_id=2075254802 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(54, 149)
+
+[node name="clouds23" parent="cloudsmatrix/clouds" unique_id=551695116 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(32, 149)
+
+[node name="clouds24" parent="cloudsmatrix/clouds" unique_id=1799835934 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(98, 142)
+
+[node name="clouds25" parent="cloudsmatrix/clouds" unique_id=341781359 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(76, 142)
+
+[node name="clouds26" parent="cloudsmatrix/clouds" unique_id=1300122053 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(142, 142)
+
+[node name="clouds27" parent="cloudsmatrix/clouds" unique_id=1896417652 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(120, 142)
+
+[node name="clouds28" parent="cloudsmatrix/clouds" unique_id=1732307836 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(99, 134)
+
+[node name="clouds29" parent="cloudsmatrix/clouds" unique_id=1343672409 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(77, 134)
+
+[node name="clouds30" parent="cloudsmatrix/clouds" unique_id=1620919704 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(143, 134)
+
+[node name="clouds31" parent="cloudsmatrix/clouds" unique_id=48915595 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(121, 134)
+
+[node name="clouds32" parent="cloudsmatrix/clouds" unique_id=736228986 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(97, 157)
+
+[node name="clouds33" parent="cloudsmatrix/clouds" unique_id=436975143 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(75, 157)
+
+[node name="clouds34" parent="cloudsmatrix/clouds" unique_id=372251309 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(141, 157)
+
+[node name="clouds35" parent="cloudsmatrix/clouds" unique_id=553540289 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(119, 157)
+
+[node name="clouds36" parent="cloudsmatrix/clouds" unique_id=1621391886 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(98, 149)
+
+[node name="clouds37" parent="cloudsmatrix/clouds" unique_id=1736553912 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(76, 149)
+
+[node name="clouds38" parent="cloudsmatrix/clouds" unique_id=648370572 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(142, 149)
+
+[node name="clouds39" parent="cloudsmatrix/clouds" unique_id=1002951002 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(120, 149)
+
+[node name="clouds44" parent="cloudsmatrix/clouds" unique_id=1246498535 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(97, 165)
+
+[node name="clouds45" parent="cloudsmatrix/clouds" unique_id=343312057 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(75, 165)
+
+[node name="clouds46" parent="cloudsmatrix/clouds" unique_id=712820795 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(141, 165)
+
+[node name="clouds47" parent="cloudsmatrix/clouds" unique_id=149945929 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(119, 165)
+
+[node name="clouds3" type="TileMapLayer" parent="cloudsmatrix" unique_id=1615257821]
+z_index = 50
+tile_map_data = PackedByteArray("AAD+/wAAAAACAAAAAAAAAP7/AAACAAAAAAD+//3/AAACAAAAAAD/////AAADAAAAAAD8/wEAAAADAAAAAAACAAAAAAADAAAAAAD7/wUAAAAGAAAAAAAAAP3/AAAHAAAAAAD7//7/AAAAAAIAAAD7////AAAAAAMAAAD7/wAAAAAAAAQAAAD8//7/AAABAAIAAAD8////AAABAAMAAAD8/wAAAAABAAQAAAD9/wEAAAAEAAEAAAD///7/AAAEAAEAAAD4/wUAAAAEAAEAAAD3/wQAAAAEAAEAAAD3/wUAAAAEAAEAAAD5/wUAAAAEAAEAAAD6/wUAAAAEAAEAAAD6/wQAAAAEAAEAAAD7/wQAAAAEAAEAAAD5/wQAAAAEAAEAAAD4/wQAAAAEAAEAAAD2/wQAAAAEAAEAAAD1/wQAAAAEAAEAAAD8/wQAAAAEAAEAAAD8/wMAAAAEAAEAAAD7/wMAAAAHAAAAAAD0/wUAAAAIAAAAAAA=")
+tile_set = SubResource("TileSet_2ih1x")
+
+[node name="clouds40" parent="cloudsmatrix/clouds3" unique_id=860240418 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-164, 167)
+
+[node name="clouds41" parent="cloudsmatrix/clouds3" unique_id=1304649317 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+z_index = 50
+position = Vector2(-186, 167)
+
+[node name="clouds41" parent="cloudsmatrix/clouds3/clouds41" unique_id=656969696 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-19, -161)
+rotation = -3.101765
+
+[node name="clouds13" parent="cloudsmatrix/clouds3/clouds41" unique_id=315461218 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-16, -184)
+rotation = -3.101765
+
+[node name="clouds8" parent="cloudsmatrix/clouds3/clouds41" unique_id=1338712828 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-15, -192)
+rotation = -3.101765
+
+[node name="clouds17" parent="cloudsmatrix/clouds3/clouds41" unique_id=2131520191 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-17, -169)
+rotation = -3.101765
+
+[node name="clouds21" parent="cloudsmatrix/clouds3/clouds41" unique_id=1300680478 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-16, -177)
+rotation = -3.101765
+
+[node name="clouds41" parent="cloudsmatrix/clouds3/clouds41/clouds21" unique_id=1435831625 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-1.1467763, -22.972557)
+
+[node name="clouds13" parent="cloudsmatrix/clouds3/clouds41/clouds21" unique_id=538966650 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(1.8532237, -45.972557)
+
+[node name="clouds8" parent="cloudsmatrix/clouds3/clouds41/clouds21" unique_id=306174472 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(2.8532238, -53.972557)
+
+[node name="clouds17" parent="cloudsmatrix/clouds3/clouds41/clouds21" unique_id=2028735551 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(0.8532237, -30.972557)
+
+[node name="clouds21" parent="cloudsmatrix/clouds3/clouds41/clouds21" unique_id=885549735 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(1.8532237, -38.972557)
+
+[node name="clouds41" parent="cloudsmatrix/clouds3/clouds41/clouds21/clouds21" unique_id=516934495 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-4.433425, -19.971453)
+
+[node name="clouds17" parent="cloudsmatrix/clouds3/clouds41/clouds21/clouds21" unique_id=780324950 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-2.4334252, -27.971453)
+
+[node name="clouds42" parent="cloudsmatrix/clouds3" unique_id=1570673338 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-120, 167)
+
+[node name="clouds43" parent="cloudsmatrix/clouds3" unique_id=1360840377 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-142, 167)
+
+[node name="clouds12" parent="cloudsmatrix/clouds3" unique_id=46200210 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-161, 144)
+
+[node name="clouds13" parent="cloudsmatrix/clouds3" unique_id=1008924574 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-183, 144)
+
+[node name="clouds14" parent="cloudsmatrix/clouds3" unique_id=280305581 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-117, 144)
+
+[node name="clouds15" parent="cloudsmatrix/clouds3" unique_id=58200322 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-139, 144)
+
+[node name="clouds9" parent="cloudsmatrix/clouds3" unique_id=1021125872 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-160, 136)
+
+[node name="clouds8" parent="cloudsmatrix/clouds3" unique_id=1829265570 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-185, 133)
+
+[node name="clouds10" parent="cloudsmatrix/clouds3" unique_id=1646600850 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-116, 136)
+
+[node name="clouds11" parent="cloudsmatrix/clouds3" unique_id=1009266426 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-138, 136)
+
+[node name="clouds16" parent="cloudsmatrix/clouds3" unique_id=1251212908 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-162, 159)
+
+[node name="clouds17" parent="cloudsmatrix/clouds3" unique_id=878245186 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-184, 159)
+
+[node name="clouds18" parent="cloudsmatrix/clouds3" unique_id=240663297 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-118, 159)
+
+[node name="clouds19" parent="cloudsmatrix/clouds3" unique_id=1122908151 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-140, 159)
+
+[node name="clouds20" parent="cloudsmatrix/clouds3" unique_id=38724879 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-161, 151)
+
+[node name="clouds21" parent="cloudsmatrix/clouds3" unique_id=176922328 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-183, 151)
+
+[node name="clouds22" parent="cloudsmatrix/clouds3" unique_id=456601052 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-117, 151)
+
+[node name="clouds23" parent="cloudsmatrix/clouds3" unique_id=1965242462 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-139, 151)
+
+[node name="clouds24" parent="cloudsmatrix/clouds3" unique_id=1797339109 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-73, 144)
+
+[node name="clouds25" parent="cloudsmatrix/clouds3" unique_id=286732970 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-95, 144)
+
+[node name="clouds26" parent="cloudsmatrix/clouds3" unique_id=2113513483 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-29, 144)
+
+[node name="clouds27" parent="cloudsmatrix/clouds3" unique_id=1300816281 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-51, 144)
+
+[node name="clouds28" parent="cloudsmatrix/clouds3" unique_id=558415753 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-72, 136)
+
+[node name="clouds29" parent="cloudsmatrix/clouds3" unique_id=446953062 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-94, 136)
+
+[node name="clouds30" parent="cloudsmatrix/clouds3" unique_id=2013524940 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-28, 136)
+
+[node name="clouds31" parent="cloudsmatrix/clouds3" unique_id=45876183 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-50, 136)
+
+[node name="clouds32" parent="cloudsmatrix/clouds3" unique_id=1280460645 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-74, 159)
+
+[node name="clouds33" parent="cloudsmatrix/clouds3" unique_id=1350369074 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-96, 159)
+
+[node name="clouds34" parent="cloudsmatrix/clouds3" unique_id=1064516362 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-30, 159)
+
+[node name="clouds35" parent="cloudsmatrix/clouds3" unique_id=21294026 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-52, 159)
+
+[node name="clouds36" parent="cloudsmatrix/clouds3" unique_id=1735013199 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-73, 151)
+
+[node name="clouds37" parent="cloudsmatrix/clouds3" unique_id=492059435 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-95, 151)
+
+[node name="clouds38" parent="cloudsmatrix/clouds3" unique_id=866294739 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-29, 151)
+
+[node name="clouds39" parent="cloudsmatrix/clouds3" unique_id=331069419 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-51, 151)
+
+[node name="clouds44" parent="cloudsmatrix/clouds3" unique_id=1446241687 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-74, 167)
+
+[node name="clouds45" parent="cloudsmatrix/clouds3" unique_id=1293099835 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-96, 167)
+
+[node name="clouds46" parent="cloudsmatrix/clouds3" unique_id=64995886 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-30, 167)
+
+[node name="clouds47" parent="cloudsmatrix/clouds3" unique_id=1634318202 instance=ExtResource("7_u5sy4")]
+modulate = Color(1, 1, 1, 0.7058824)
+position = Vector2(-52, 167)
+
+[node name="tree1" parent="cloudsmatrix" unique_id=1165323117 instance=ExtResource("9_vtaks")]
+position = Vector2(-43, -28)
+
+[node name="tree2" parent="cloudsmatrix" unique_id=2134158575 instance=ExtResource("9_vtaks")]
+position = Vector2(22, -9)
+
+[connection signal="body_entered" from="House/door/Area2D" to="House" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="House/door/Area2D" to="House" method="_on_area_2d_body_exited"]
