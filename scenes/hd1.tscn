@@ -323,18 +323,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
-size = Vector2(8, 13)
+size = Vector2(4, 5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2k7py"]
 radius = 66.007576
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtaks"]
 radius = 6.0
-height = 18.0
+height = 20.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2068090914]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_2k7py")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=578032866]
@@ -343,7 +343,7 @@ animation = &"IDLE_UP"
 frame_progress = 0.40949094
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=939841208]
-position = Vector2(0, 0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_0tnpc")
 
 [node name="DetectionArea2d" type="Area2D" parent="." unique_id=1573438334]

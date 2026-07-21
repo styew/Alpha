@@ -302,7 +302,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug8er"]
-size = Vector2(9, 13)
+size = Vector2(9, 12)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=781604950]
 collision_layer = 2
@@ -314,7 +314,7 @@ sprite_frames = SubResource("SpriteFrames_vm3xe")
 animation = &"attack_DOWN"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1816967799]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_ug8er")
 
 [node name="WeaponHolder" type="Node2D" parent="." unique_id=1453424814]

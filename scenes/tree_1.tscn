@@ -50,6 +50,7 @@ sprite_frames = SubResource("SpriteFrames_7qi08")
 frame_progress = 0.20771104
 
 [node name="Area2D" type="Area2D" parent="." unique_id=147613596]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1923610385]
 position = Vector2(0, 9)

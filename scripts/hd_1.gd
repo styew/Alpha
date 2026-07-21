@@ -22,26 +22,38 @@ var damage = 10
 
 
 func _ready():
-	pass
+	floor_snap_length = 0
+	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 
 
 func _physics_process(_delta):
+
 	if attacking:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
-	if player!= null:	
+
+
+	if player != null:
+
 		if player_in_attack_range:
+			velocity = Vector2.ZERO
 			attack()
+
 		else:
 			current_state = State.CHASE
+
 			var direction = global_position.direction_to(player.global_position)
+
 			update_direction(direction)
+
 			velocity = direction * SPEED
+
 
 	else:
 		current_state = State.IDLE
 		velocity = Vector2.ZERO
+
 
 	move_and_slide()
 	update_animation()
@@ -88,11 +100,11 @@ func attack():
 	velocity = Vector2.ZERO
 	update_animation()
 	await sprite.animation_finished
+	if player != null and player_in_attack_range:
+		player.take_damage(damage)
 	attacking = false
 	current_state = State.IDLE
 	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
-	if player != null and player_in_attack_range:
-		player.take_damage(damage)
 	can_attack = true
 
 

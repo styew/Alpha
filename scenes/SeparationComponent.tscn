@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cmnyir18bi77"]
+
+[sub_resource type="GDScript" id="GDScript_0cp34"]
+script/source = "extends Node2D
+
+@export var separation_distance := 20.0
+@export var separation_strength := 100.0
+
+var nearby_bodies = []
+
+
+func get_separation_force():
+
+	var force = Vector2.ZERO
+
+	for body in nearby_bodies:
+
+		if body == get_parent():
+			continue
+
+		var distance = global_position.distance_to(body.global_position)
+
+		if distance < separation_distance:
+
+			var away = body.global_position.direction_to(global_position)
+
+			force += away * separation_strength
+
+
+	return force
+"
+
+[node name="Node2D" type="Node2D" unique_id=447481809]
+script = SubResource("GDScript_0cp34")

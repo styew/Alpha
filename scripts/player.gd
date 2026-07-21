@@ -4,11 +4,16 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 @onready var weapon = $WeaponHolder/Knife
 
+signal health_changed(new_health)
+
 
 var last_direction = "DOWN"
 var attacking = false
 var health= 50
 const SPEED = 100
+
+func _ready():
+	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 
 
 func _physics_process(delta):
@@ -100,11 +105,15 @@ func update_animation(direction):
 func take_damage(amount):
 	health -= amount
 	print("health of player ",health)
+	health_changed.emit(health)
+	
 	if health <= 0:
 		die()
 		
+		
 func die():
 	print("player morreu")
+	await get_tree().process_frame
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
-		
+	
 		
