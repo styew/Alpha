@@ -1,54 +1,48 @@
 [gd_scene format=3 uid="uid://db8lswnrlp82b"]
 
-[ext_resource type="Texture2D" uid="uid://bctmsrwxic37t" path="res://assets/ground.png" id="1_avsvi"]
-[ext_resource type="Script" uid="uid://ifjdmrw472fg" path="res://scripts/tree.gd" id="2_vplca"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vplca"]
-atlas = ExtResource("1_avsvi")
-region = Rect2(80, 108, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_viusy"]
-atlas = ExtResource("1_avsvi")
-region = Rect2(96, 108, 16, 36)
+[ext_resource type="Script" uid="uid://dp25unq1iudrm" path="res://scripts/tree.gd" id="1_vplca"]
+[ext_resource type="Texture2D" uid="uid://c3p0tftb6to03" path="res://assets/vegetation.png" id="2_viusy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
-atlas = ExtResource("1_avsvi")
-region = Rect2(112, 108, 16, 36)
+atlas = ExtResource("2_viusy")
+region = Rect2(32, 40, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ake3r"]
+atlas = ExtResource("2_viusy")
+region = Rect2(64, 40, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18mvg"]
+atlas = ExtResource("2_viusy")
+region = Rect2(96, 40, 32, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7qi08"]
 animations = [{
 "frames": [{
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_vplca")
-}, {
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_viusy")
-}, {
-"duration": 4.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_qd6xs")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_ake3r")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_18mvg")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ug8er"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ug8er"]
+size = Vector2(10, 6)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qi08"]
-size = Vector2(13, 10)
+[node name="tree" type="StaticBody2D" unique_id=1090393745]
+collision_mask = 0
+script = ExtResource("1_vplca")
 
-[node name="tree" type="Node2D" unique_id=684507532]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370377266]
-position = Vector2(-1, 9)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1803066237]
+z_index = 5
+position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_7qi08")
-frame_progress = 0.13838644
-script = ExtResource("2_vplca")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=449561033]
-physics_material_override = SubResource("PhysicsMaterial_ug8er")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1797889281]
-visible = false
-position = Vector2(-1.5, 22)
-shape = SubResource("RectangleShape2D_7qi08")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1782523599]
+shape = SubResource("RectangleShape2D_ug8er")
