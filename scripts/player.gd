@@ -11,6 +11,7 @@ var last_direction = "DOWN"
 var attacking = false
 var health= 50
 const SPEED = 100
+var current_interactable = null
 
 func _ready():
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
@@ -28,6 +29,12 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("attack"):
 		attack()
+		
+	#Door signal to open and close
+	if Input.is_action_just_pressed("interact"):
+
+		if current_interactable:
+			current_interactable.interact()
 
 
 	if not attacking:

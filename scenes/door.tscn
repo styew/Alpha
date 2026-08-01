@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dnh7y22i3k8cg"]
+
+[ext_resource type="Texture2D" uid="uid://b6tvx85awk4x" path="res://assets/house_ext.png" id="1_hpvv5"]
+[ext_resource type="Script" uid="uid://db8mu656ag382" path="res://assets/door.gd" id="1_uvdjg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvdjg"]
+atlas = ExtResource("1_hpvv5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83dcw"]
+atlas = ExtResource("1_hpvv5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qi08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvdjg")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83dcw")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ug8er"]
+size = Vector2(32, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qi08"]
+size = Vector2(27, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pn7n"]
+size = Vector2(5, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x51em"]
+size = Vector2(11.25, 11)
+
+[sub_resource type="SystemFont" id="SystemFont_uvdjg"]
+
+[node name="Door" type="Node2D" unique_id=1492904536]
+script = ExtResource("1_uvdjg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1312913053]
+sprite_frames = SubResource("SpriteFrames_7qi08")
+animation = &"closed"
+
+[node name="StaticBody2D_Close" type="StaticBody2D" parent="." unique_id=736522650]
+position = Vector2(0, 3)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Close" unique_id=1437506159]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_ug8er")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=28185703]
+visible = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=867476192]
+position = Vector2(2.5, 2)
+shape = SubResource("RectangleShape2D_7qi08")
+
+[node name="StaticBody2D_Open" type="StaticBody2D" parent="." unique_id=379847148]
+visible = false
+position = Vector2(0, 3)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D_Open" unique_id=72714035]
+position = Vector2(13.5, 7.5)
+shape = SubResource("RectangleShape2D_7pn7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D_Open" unique_id=1730856568]
+position = Vector2(-10.625, 7.5)
+shape = SubResource("RectangleShape2D_x51em")
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=16389232]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("SystemFont_uvdjg")
+theme_override_font_sizes/font_size = 8
+text = "[E] Abrir Porta"
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
