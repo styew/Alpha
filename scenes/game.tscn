@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c3p0tftb6to03" path="res://assets/vegetation.png" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://db8lswnrlp82b" path="res://scenes/tree.tscn" id="8_kvpfn"]
 [ext_resource type="Script" uid="uid://cfi3xgkmu56l6" path="res://scripts/hud.gd" id="10_dinhu"]
+[ext_resource type="Script" uid="uid://dgngdaybba1hl" path="res://scripts/day_nicht_manager.gd" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dxlqjjt6l6wk0" path="res://assets/ui_leben.png" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://d0mifn502pjoe" path="res://assets/leben.png" id="11_kvpfn"]
 
@@ -289,3 +290,6 @@ offset_right = 295.0
 offset_bottom = 50.0
 value = 50.0
 texture_progress = ExtResource("11_kvpfn")
+
+[node name="DayNichtManager" type="Node" parent="." unique_id=1193030551]
+script = ExtResource("10_kvpfn")

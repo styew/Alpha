@@ -143,7 +143,6 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_48iru"]
-radius = 5.0249376
 
 [node name="knife" type="Node2D" unique_id=2130549232]
 script = ExtResource("1_syuqf")
