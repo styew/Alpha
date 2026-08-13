@@ -6,11 +6,10 @@ signal round_changed
 
 
 var current_round := 1
-
 var is_day := true
 
-var day_duration := 3.0
-var night_duration := 3.0
+var day_duration := 10.0
+var night_duration := 10.0
 
 var time_remaining := day_duration
 
