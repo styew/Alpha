@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d2bttvkvek4im" path="res://scripts/house_01.gd" id="1_yemhc"]
 [ext_resource type="Texture2D" uid="uid://b6tvx85awk4x" path="res://assets/house_ext.png" id="2_4dxfy"]
 [ext_resource type="PackedScene" uid="uid://dnh7y22i3k8cg" path="res://scenes/door.tscn" id="3_4dxfy"]
+[ext_resource type="Texture2D" uid="uid://dm07w2452r1qh" path="res://assets/HouseLightTexture.png" id="5_bcm2c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yemhc"]
 texture = ExtResource("1_u7ecm")
@@ -386,6 +387,13 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteriorArea" unique_id=1266780086]
 position = Vector2(32.5, 23)
 shape = SubResource("RectangleShape2D_83dcw")
+
+[node name="HouseLight" type="Node2D" parent="." unique_id=972973252]
+
+[node name="PointLight2D" type="PointLight2D" parent="HouseLight" unique_id=2135426522]
+position = Vector2(31.5, 15.5)
+scale = Vector2(9.8125, 7.9375)
+texture = ExtResource("5_bcm2c")
 
 [connection signal="body_entered" from="InteriorArea" to="." method="_on_interior_area_body_entered"]
 [connection signal="body_exited" from="InteriorArea" to="." method="_on_interior_area_body_exited"]

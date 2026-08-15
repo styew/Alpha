@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://1jxhuuoy0u7s" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dtjwfcrc67bsi" path="res://assets/attack.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://dljfpvnkextvg" path="res://scenes/knife.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://r4okf8fhri0t" path="res://assets/LightViewTexture.png" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
 atlas = ExtResource("1_3vyb7")
@@ -320,3 +321,11 @@ shape = SubResource("RectangleShape2D_ug8er")
 [node name="WeaponHolder" type="Node2D" parent="." unique_id=1453424814]
 
 [node name="Knife" parent="WeaponHolder" unique_id=2130549232 instance=ExtResource("3_qhqgy")]
+
+[node name="playerLight" type="Node2D" parent="." unique_id=1518675333]
+
+[node name="PointLight2D" type="PointLight2D" parent="playerLight" unique_id=726268715]
+position = Vector2(4.999994, -4.999995)
+scale = Vector2(0.54296875, 0.53515625)
+energy = 0.7
+texture = ExtResource("5_qlg0r")
