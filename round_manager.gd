@@ -50,6 +50,7 @@ func consume_cost(amount: float) -> bool:
 
 		return false
 
+
 	remaining_cost -= amount
 
 	return true
