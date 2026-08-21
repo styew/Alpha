@@ -14,6 +14,7 @@ var night_duration := 10.0
 var time_remaining := day_duration
 
 
+
 func _process(delta):
 
 	time_remaining -= delta

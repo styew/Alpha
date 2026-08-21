@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bctmsrwxic37t" path="res://assets/ground.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://333qe6agyyy1" path="res://scenes/house_01.tscn" id="3_0tnpc"]
 [ext_resource type="Script" uid="uid://cw08112u051xr" path="res://round_manager.gd" id="3_dinhu"]
-[ext_resource type="PackedScene" uid="uid://dg4ywurdhq0dx" path="res://scenes/hd1.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://bdrwxxlxxnr1x" path="res://enemy_spawner.gd" id="3_kvuet"]
+[ext_resource type="Script" uid="uid://c6jw5x6e2fqf8" path="res://data/enemies/enemies_data.gd" id="4_trtic"]
+[ext_resource type="Resource" uid="uid://c8pv8rfu8515g" path="res://data/enemies/MonsterData1.tres" id="5_ir15t"]
 [ext_resource type="Texture2D" uid="uid://c3p0tftb6to03" path="res://assets/vegetation.png" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://db8lswnrlp82b" path="res://scenes/tree.tscn" id="8_kvpfn"]
 [ext_resource type="Script" uid="uid://cfi3xgkmu56l6" path="res://scripts/hud.gd" id="10_dinhu"]
@@ -203,6 +205,10 @@ script = ExtResource("10_kvpfn")
 [node name="LightingManager" type="Node" parent="." unique_id=167173937]
 script = ExtResource("11_dinhu")
 
+[node name="EnemySpawner" type="Node" parent="." unique_id=2037656459]
+script = ExtResource("3_kvuet")
+enemy_data = Array[ExtResource("4_trtic")]([ExtResource("5_ir15t")])
+
 [node name="RoundManager" type="Node" parent="." unique_id=1115369718]
 script = ExtResource("3_dinhu")
 
@@ -272,19 +278,19 @@ position = Vector2(102, 39)
 position = Vector2(-1, 0)
 zoom = Vector2(4, 4)
 
-[node name="Enemy2" parent="Characters" unique_id=2068090914 instance=ExtResource("3_lnu2h")]
-z_index = 5
-position = Vector2(-275, 8)
-
-[node name="Enemy3" parent="Characters" unique_id=2048742153 instance=ExtResource("3_lnu2h")]
-z_index = 5
-position = Vector2(-23, 16)
-
-[node name="Enemy4" parent="Characters" unique_id=974876908 instance=ExtResource("3_lnu2h")]
-z_index = 5
-position = Vector2(-158, 9)
+[node name="Monsters" type="Node" parent="Characters" unique_id=1586202850]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1293633280]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=778755340]
+
+[node name="SpawnPoint1" type="Marker2D" parent="SpawnPoints" unique_id=858988431]
+position = Vector2(0, -77)
+gizmo_extents = 0.0
+
+[node name="SpawnPoint2" type="Marker2D" parent="SpawnPoints" unique_id=1016409802]
+position = Vector2(-155, 180)
+gizmo_extents = 0.0
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1827087934]
 script = ExtResource("10_dinhu")

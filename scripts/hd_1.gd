@@ -17,6 +17,13 @@ var player_in_attack_range = false
 var player = null
 var damage = 10
 
+# Spawn configuration
+@export var spawn_cost: float = 1.0
+@export var spawn_weight: float = 80.0
+
+@export var day_spawn: bool = true
+@export var night_spawn: bool = false
+
 @onready var sprite = $AnimatedSprite2D
 
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c8pv8rfu8515g"]
+
+[ext_resource type="Script" uid="uid://c6jw5x6e2fqf8" path="res://data/enemies/enemies_data.gd" id="1_suhwd"]
+[ext_resource type="PackedScene" uid="uid://dg4ywurdhq0dx" path="res://scenes/Enemies/hd1.tscn" id="1_uiins"]
+
+[resource]
+script = ExtResource("1_suhwd")
+enemy_scene = ExtResource("1_uiins")
+spawn_weight = 80.0
+metadata/_custom_type_script = "uid://c6jw5x6e2fqf8"

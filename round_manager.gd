@@ -21,14 +21,6 @@ func _ready():
 	print("Custo total: ", round_cost)
 	print("Custo restante: ", remaining_cost)
 
-	print("Tentando gastar 3...")
-
-	if consume_cost(88.0):
-		print("Sucesso!")
-	else:
-		print("Custo insuficiente!")
-
-	print("Custo restante: ", remaining_cost)
 
 func _on_phase_changed():
 
@@ -50,11 +42,14 @@ func calculate_round_cost() -> float:
 	var r = current_round
 
 	return 10.0 + 3.0 * (r - 1) + 0.15 * pow(r - 1, 2)
-	
+
+
 func consume_cost(amount: float) -> bool:
 
 	if amount > remaining_cost:
+
 		return false
 
 	remaining_cost -= amount
+
 	return true
