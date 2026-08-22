@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
 @onready var weapon = $WeaponHolder/Knife
+@onready var inventory: Inventory = $Inventory
 
 signal health_changed(new_health)
 
@@ -15,7 +16,8 @@ var current_interactable = null
 
 func _ready():
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
-
+	var knife = preload("res://data/items/Knife.tres")
+	inventory.add_item(knife)
 
 func _physics_process(delta):
 

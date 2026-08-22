@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtjwfcrc67bsi" path="res://assets/attack.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://dljfpvnkextvg" path="res://scenes/knife.tscn" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://r4okf8fhri0t" path="res://assets/LightViewTexture.png" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://ys2yponm2lbu" path="res://scripts/Inventary.gd" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
 atlas = ExtResource("1_3vyb7")
@@ -329,3 +330,6 @@ position = Vector2(4.999994, -4.999995)
 scale = Vector2(0.54296875, 0.53515625)
 energy = 0.7
 texture = ExtResource("5_qlg0r")
+
+[node name="Inventory" type="Node" parent="." unique_id=1261327458]
+script = ExtResource("6_tuyoq")

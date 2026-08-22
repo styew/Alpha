@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dofo36hfvdecq"]
+
+[ext_resource type="Texture2D" uid="uid://byf0w22lqmuqa" path="res://assets/Knife_icon.png" id="1_1bcq4"]
+[ext_resource type="Script" uid="uid://cpcpmhbuquxgg" path="res://scripts/data/ItemData.gd" id="1_j3taf"]
+
+[resource]
+script = ExtResource("1_j3taf")
+item_name = "Knife"
+icon = ExtResource("1_1bcq4")
+description = "A basic Knife"
+metadata/_custom_type_script = "uid://cpcpmhbuquxgg"
